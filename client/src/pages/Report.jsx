@@ -15,15 +15,20 @@ export default function Report() {
       fd.append('latitude', pos.coords.latitude)
       fd.append('longitude', pos.coords.longitude)
       try {
-        const res = await axios.post('http://localhost:5000/api/reports', fd)
-        alert('Reported! id: ' + res.data.id)
+        const res = await axios.post("http://localhost:5000/api/reports", fd, {
+          headers: { "Content-Type": "multipart/form-data" },
+        });
+        alert("Reported! id: " + res.data.id);
       } catch (err) {
-        console.error(err); alert('Upload failed')
+        console.error(err);
+        alert("Upload failed");
       }
     }, async () => {
       fd.append('latitude', 0); fd.append('longitude', 0)
       try {
-        const res = await axios.post('http://localhost:5000/api/reports', fd)
+        const res = await axios.post('http://localhost:5000/api/reports', fd, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
         alert('Reported! id: ' + res.data.id)
       } catch (err) {
         console.error(err); alert('Upload failed')
