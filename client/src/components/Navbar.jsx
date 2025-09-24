@@ -9,8 +9,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item"><Link className="nav-link" to="/report">Report</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/map">Map</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/map">Waste Map</Link></li>
+            {/* <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li> */}
+            <li className="nav-item"><Link className="nav-link" to="/feedback">Feedback</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/recycle">Recycle</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/reportform">Report Form</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/scheduler">Scheduler</Link></li>
           </ul>
         </div>
       </div>

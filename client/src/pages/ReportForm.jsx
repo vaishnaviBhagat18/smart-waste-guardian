@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React, {useState} from 'react'
 
-function ReportForm({ activeTab }) {
-  const [reportType, setReportType] = useState("littering");
-  const [reportDetails, setReportDetails] = useState("");
-  const [reportLocation, setReportLocation] = useState("");
-
-  const handleReportSubmit = (e) => {
-    e.preventDefault();
-    if (reportDetails && reportLocation) {
-      alert("Report submitted successfully! Our team will address this issue.");
-      setReportDetails("");
-      setReportLocation("");
-      setReportType("littering");
-    }
-  };
-
-  if (activeTab !== "report") return null;
-
+function ReportForm() {
+    const [reportType, setReportType] = useState("littering");
+    const [reportDetails, setReportDetails] = useState("");
+    const [reportLocation, setReportLocation] = useState("");
+  
+    const handleReportSubmit = (e) => {
+      e.preventDefault();
+      if (reportDetails && reportLocation) {
+        alert("Report submitted successfully! Our team will address this issue.");
+        setReportDetails("");
+        setReportLocation("");
+        setReportType("littering");
+      }
+    };
+    
   return (
     <div className="max-w-2xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Report an Issue</h2>
@@ -74,7 +72,7 @@ function ReportForm({ activeTab }) {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default ReportForm;
+export default ReportForm
