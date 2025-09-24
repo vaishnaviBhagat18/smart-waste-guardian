@@ -19,7 +19,7 @@ export default function Navbar() {
     
     <nav className="navbar navbar-expand-lg " style={{ backgroundColor: '#237c27ff' }}>
       <div className="container-fluid">
-        <Link className="navbar-brand text-white nav-link:hover" to="/">Smart Waste</Link>
+        <Link className="navbar-brand text-white nav-link:hover" to="/">Smart Waste Guardian</Link>
         <button
           className="navbar-toggler border-white"
           type="button"

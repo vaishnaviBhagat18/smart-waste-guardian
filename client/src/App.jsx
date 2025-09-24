@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Report from './pages/Report'
 import MapView from './pages/MapView'
 import Leaderboard from './pages/Leaderboard'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </div>
+      <Footer />
     </>
   )
 }
